@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VBK – Budgetkürzungen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+// Kopieren-Button Funktion
+document.addEventListener('DOMContentLoaded', () => {
+    const copyBtn = document.querySelector('.copy-btn');
+    copyBtn.addEventListener('click', () => {
+        const email = copyBtn.getAttribute('data-email');
+        navigator.clipboard.writeText(email).then(() => {
+            // Optional: kurzes Feedback anzeigen
+            copyBtn.textContent = '✓';
+            setTimeout(() => { copyBtn.textContent = '🗍'; }, 1500);
+        }).catch(err => {
+            console.error('Fehler beim Kopieren:', err);
+        });
+    });
+});
+</script>
+</head>
+<body>
+<header class="hero">
+    <div class="hero-container">
+        <div class="hero-image">
+            <a href="index.html"><img src="straßenbahn_durchgestrichen.png" alt="Durchgestrichene Straßenbahn"></a>
+        </div>
+        <div class="hero-text">
+            <h1>Busse und Tram in Gefahr!</h1>
+            <h2>Große Linienkürzungen im Karlsruher Netz durch den geplanten neuen Haushaltsplan.</h2>
+            <h1>Auch deine Linie ist betroffen!</h1>
+            <div class="hero-buttons">
+                <a href="kurzungen.html">Kürzungen auf einen Blick</a>
+                <a href="warum.html">Warum wird eingespart?</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="overview">
+    <h2>Impressum</h2>
+    <p>Verantwortlich für die Inhalte dieser Seite:</p>
+    <p>
+        VCD Baden-Württemberg e.V. <br>
+        Kreisverband Karlsruhe <br>
+        Tübinger Str. 15 <br>
+        70178 Stuttgart<br>
+        <br>
+        Telefon.: (07 11) 6 07 02 17<br>
+        E-Mail: info@vcd-bw.de<br>
+        <br>
+        Registergericht: Amtsgericht Stuttgart<br>
+        Registernummer: VR 4528
+    </p>
+    <p>Haftungshinweis: Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+</section>
+
+<footer>
+    <nav class="subpages-nav">
+        <a href="kurzungen.html">Kürzungen auf einen Blick</a>
+        <a href="warum.html">Warum wird eingespart?</a>
+    </nav>
+    <p><a href="impressum.html">Impressum / Datenschutz</a></p>
+    <p><a href="https://bw.vcd.org/der-vcd-in-bw/karlsruhe" target="_blank">VCD Kreisverband Karlsruhe</a></p>
+</footer>
+</body>
+</html>
