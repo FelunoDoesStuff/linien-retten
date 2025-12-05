@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VBK – Budgetkürzungen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+// Kopieren-Button Funktion
+document.addEventListener('DOMContentLoaded', () => {
+    const copyBtn = document.querySelector('.copy-btn');
+    copyBtn.addEventListener('click', () => {
+        const email = copyBtn.getAttribute('data-email');
+        navigator.clipboard.writeText(email).then(() => {
+            // Optional: kurzes Feedback anzeigen
+            copyBtn.textContent = '✓';
+            setTimeout(() => { copyBtn.textContent = '🗍'; }, 1500);
+        }).catch(err => {
+            console.error('Fehler beim Kopieren:', err);
+        });
+    });
+});
+</script>
+</head>
+<body>
+<header class="hero">
+    <div class="hero-container">
+        <div class="hero-image">
+            <a href="../index.html"><img src="../straßenbahn_durchgestrichen.png" alt="Durchgestrichene Straßenbahn"></a>
+        </div>
+        <div class="hero-text">
+            <h1>Busse und Tram in Gefahr!</h1>
+            <h2>Große Linienkürzungen im Karlsruher Netz durch den geplanten neuen Haushaltsplan.</h2>
+            <h1>Auch deine Linie ist betroffen!</h1>
+            <div class="hero-buttons">
+                <a href="../kurzungen.html">Kürzungen auf einen Blick</a>
+                <a href="../warum.html">Warum wird eingespart?</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="overview">
+    <h2>Linie 74</h2>
+
+    <h3>tägl.</h3>
+    <p>
+        - Kompletteinstellung<br>
+    </p>
+    <br>
+    <br>
+    <p>Der ÖPNV ist eine Daseinsvorsorge für Schüler, Rentner und Personen ohne Auto. Das starke Einkürzen des öffentlichen Verkehrs ist eine entscheidung gegen die Verkehrswende und lässt Menschen auf der Strecke.</p>
+    <p>Ein Einsatz gegen Kürzungen an Bus und Bahn ist ein einsatz Für die Bevölkerung, Kinder, Nachbarn und euch selbst.</p>
+
+
+
+    <h2>Schreibt daher jetzt dem Gemeinderat:</h2>
+    <div class="subpages-nav">
+        <!-- Mailto-Link -->
+        <a href="mailto:fraktionen@karlsruhe.de?subject=VBK-Einsparkonzept aufhalten">Alle Fraktionen direkt anschreiben</a>
+
+        <!-- Kopieren-Button -->
+        <button class="copy-btn" data-email="fraktionen@karlsruhe.de" title="In die Zwischenablage kopieren">
+            🗍
+        </button>
+    </div>
+    <br>
+    <br>
+    <h2>Alle Infos zum Download:</h2>
+    <p><a href="https://web1.karlsruhe.de/ris/oparl/bodies/0001/downloadfiles/00671841.pdf">Dokument der VBK über die Einsparungspläne</a></p>
+
+    <br>
+    <hr>
+    <br>
+    <h2>Betroffene Linien</h2>
+
+    <h3>S-Bahn</h3>
+    <div class="line-row">
+        <a class="line-btn sbahn-shape" style="background-color: #A066AA;" href="linien/s2.html">S2</a>
+    </div>
+
+    <h3>Tram</h3>
+    <div class="line-row">
+        <a class="line-btn tram-shape" style="background-color: #ED1C24;" href="linien/1.html">1</a>
+        <a class="line-btn tram-shape" style="background-color: #0071BC;" href="linien/2.html">2</a>
+        <a class="line-btn tram-shape" style="background-color: #947139;" href="linien/3.html">3</a>
+        <a class="line-btn tram-shape" style="background-color: #FFCB04;" href="linien/4.html">4</a>
+        <a class="line-btn tram-shape" style="background-color: #00C0F3;" href="linien/5.html">5</a>
+    </div>
+
+    <h3>Bus</h3>
+    <div class="line-row">
+        <a class="line-btn bus-shape" style="background-color: #48815C;" href="linien/21.html">21</a>
+        <a class="line-btn bus-shape" style="background-color: #62BB46;" href="linien/22.html">22</a>
+        <a class="line-btn bus-shape" style="background-color: #ADBC72;" href="linien/23.html">23</a>
+        <a class="line-btn bus-shape" style="background-color: #004A21;" href="linien/24.html">24</a>
+        <a class="line-btn bus-shape" style="background-color: #D7DF23;" href="linien/26.html">26</a>
+        <a class="line-btn bus-shape" style="background-color: #00AEEF;" href="linien/30.html">30</a>
+        <a class="line-btn bus-shape" style="background-color: #93BED2;" href="linien/31.html">31</a>
+        <a class="line-btn bus-shape" style="background-color: #485E88;" href="linien/32.html">32</a>
+        <a class="line-btn bus-shape" style="background-color: #485E88;" href="linien/42.html">42</a>
+        <a class="line-btn bus-shape" style="background-color: #00AEEF;" href="linien/47A.html">47A</a>
+        <a class="line-btn bus-shape" style="background-color: #874487;" href="linien/50.html">50</a>
+        <a class="line-btn bus-shape" style="background-color: #9B95C9;" href="linien/62.html">62</a>
+        <a class="line-btn bus-shape" style="background-color: #806A50;" href="linien/70.html">70</a>
+        <a class="line-btn bus-shape" style="background-color: #B2A291;" href="linien/71.html">71</a>
+        <a class="line-btn bus-shape" style="background-color: #D2AB67;" href="linien/72.html">72</a>
+        <a class="line-btn bus-shape" style="background-color: #806A50;" href="linien/73.html">73</a>
+        <a class="line-btn bus-shape" style="background-color: #D2AB67;" href="linien/74.html">74</a>
+        <a class="line-btn bus-shape" style="background-color: #A25641;" href="linien/75.html">75</a>
+    </div>
+</section>
+
+<footer>
+    <nav class="subpages-nav">
+        <a href="../kurzungen.html">Kürzungen auf einen Blick</a>
+        <a href="../warum.html">Warum wird eingespart?</a>
+    </nav>
+    <p><a href="../impressum.html">Impressum / Datenschutz</a></p>
+    <p><a href="https://bw.vcd.org/der-vcd-in-bw/karlsruhe" target="_blank">VCD Kreisverband Karlsruhe</a></p>
+</footer>
+</body>
+</html>
